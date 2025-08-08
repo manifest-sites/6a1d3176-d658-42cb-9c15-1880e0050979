@@ -1,0 +1,35 @@
+{
+  "name": "FlashCard",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "number",
+      "description": "Unique identifier for the user"
+    },
+    "id": {
+      "type": "number",
+      "description": "Unique identifier for the flash card session"
+    },
+    "correctAnswers": {
+      "type": "number",
+      "description": "Number of correct answers in this session"
+    },
+    "totalQuestions": {
+      "type": "number",
+      "description": "Total number of questions attempted in this session"
+    },
+    "level": {
+      "type": "string",
+      "description": "Difficulty level (easy, medium, hard)"
+    },
+    "sessionDate": {
+      "type": "string",
+      "description": "Date of the flash card session"
+    }
+  },
+  "required": [
+    "correctAnswers",
+    "totalQuestions",
+    "level"
+  ]
+}

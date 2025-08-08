@@ -1,0 +1,35 @@
+{
+  "name": "new-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sh -c 'npm run generate:entities > /dev/null 2>&1 && concurrently \"npm run generate:entities:watch\" \"vite $@\" > /dev/null 2>&1 & echo \"Dev server started in background. Use pkill -f man-template-repo/project to stop.\"' -- ",
+    "build": "npm install && npm run generate:entities && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "generate:entities": "node scripts/generateEntityStubs.js",
+    "generate:entities:watch": "nodemon --watch src/entities --ext json --exec 'npm run generate:entities'"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "antd": "^5.26.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.1",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "nodemon": "^3.1.10",
+    "vite": "^7.0.4"
+  }
+}

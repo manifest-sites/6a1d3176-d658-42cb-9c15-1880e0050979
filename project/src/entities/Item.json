@@ -1,0 +1,26 @@
+{
+    "name": "Item",
+    "type": "object",
+    "properties": {
+      "userId": {
+        "type": "number",
+        "description": "Unique identifier for the user who owns the to do list item"
+      },
+      "id": {
+        "type": "number",
+        "description": "Unique identifier for the to do list item"
+      },
+      "title": {
+        "type": "string",
+        "description": "Name of to do list item"
+      },
+      "completed": {
+        "type": "boolean",
+        "description": "Whether the to do list item is complete"
+      }
+    },
+    "required": [
+      "name",
+      "is_complete"
+    ]
+  }
