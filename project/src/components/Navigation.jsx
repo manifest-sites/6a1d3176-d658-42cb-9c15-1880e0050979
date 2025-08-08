@@ -19,6 +19,16 @@ function Navigation() {
             Flash Cards
           </Link>
           <Link 
+            to="/battleship" 
+            className={`py-4 px-6 border-b-2 transition-colors ${
+              location.pathname === '/battleship' 
+                ? 'border-white text-white' 
+                : 'border-transparent text-gray-300 hover:text-white hover:border-gray-300'
+            }`}
+          >
+            Battleship
+          </Link>
+          <Link 
             to="/about" 
             className={`py-4 px-6 border-b-2 transition-colors ${
               location.pathname === '/about' 

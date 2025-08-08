@@ -1,0 +1,51 @@
+{
+  "name": "Game",
+  "type": "object",
+  "properties": {
+    "gameId": {
+      "type": "string",
+      "description": "Unique identifier for the game"
+    },
+    "player1": {
+      "type": "string",
+      "description": "Name of player 1"
+    },
+    "player2": {
+      "type": "string",
+      "description": "Name of player 2"
+    },
+    "currentPlayer": {
+      "type": "number",
+      "description": "Which player's turn it is (1 or 2)"
+    },
+    "gameStatus": {
+      "type": "string",
+      "description": "Current game status: waiting, setup, playing, finished"
+    },
+    "winner": {
+      "type": "string",
+      "description": "Winner of the game if finished"
+    },
+    "player1Board": {
+      "type": "object",
+      "description": "Player 1's ship positions and hits"
+    },
+    "player2Board": {
+      "type": "object", 
+      "description": "Player 2's ship positions and hits"
+    },
+    "player1Attacks": {
+      "type": "array",
+      "description": "Player 1's attack positions"
+    },
+    "player2Attacks": {
+      "type": "array",
+      "description": "Player 2's attack positions"
+    }
+  },
+  "required": [
+    "gameId",
+    "player1",
+    "gameStatus"
+  ]
+}

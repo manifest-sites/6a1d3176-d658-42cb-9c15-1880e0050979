@@ -4,6 +4,7 @@ import Monetization from './components/monetization/Monetization'
 import FlashCardApp from './components/FlashCardApp'
 import About from './components/About'
 import Navigation from './components/Navigation'
+import BattleshipGame from './components/BattleshipGame'
 import { getRouterBasename } from './utils/routerUtils'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<FlashCardApp />} />
+          <Route path="/battleship" element={<BattleshipGame />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>
